@@ -18,31 +18,31 @@
 <link href="../../css/pager.css" rel="stylesheet" type="text/css" />
 
 
-<script language="javascript" > 
+<script language="javascript" >
 grid_url='pay_list_panel.jsp';
 grid_id="pay_list";
 
 function del(){
-	 
+
 	 var flag = Utils.chk_selected("area_id");
-	 
-	 if(!flag){ 
+
+	 if(!flag){
 	 	alert('请选择要删除的配送地区');
 	 	return ;
 	 }
-	 
+
 	 if (confirm('确认删除配送地区吗?删除后将不可恢复')){
 		 gridpost('area_from','area_delete.jsp');
 	 }
-	 
+
 }
 
- 
+
 
 
 function area_list_loadSuccess(){
 	cell_color();
-  
+
 }
 
 
@@ -54,10 +54,10 @@ function area_list_loadSuccess(){
 
 <span class="action-span1"><a href="../home.jsp">管理中心</a>  - 支付方式 </span>
 <div style="clear:both"></div>
-</h1>  
- 
-<html:ajaxpanel id="pay_list" url="pay_list_panel.jsp"></html:ajaxpanel >
- 
+</h1>
+
+
+
 
 <jsp:include page="../../admin/footer.jsp"/>
 </body>
