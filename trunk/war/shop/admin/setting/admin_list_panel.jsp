@@ -1,9 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ include file="/commons/taglibs.jsp" %>
 <sql:datasource id="adminlist" type="list">
-<%@ taglib uri="/WEB-INF/html.tld" prefix="html" %>
 	<sql:append>
-select * from js_administrator 
+select * from js_administrator
  </sql:append>
 </sql:datasource>
 
@@ -18,10 +17,10 @@ select * from js_administrator
 			<div style="clear:both"></div>
 		</div>
 
-		<grid:grid from="adminlist" type="list" ajax="yes">
+		<grid:grid from="adminlist" ajax="yes">
 
 			<grid:header>
-			<grid:cell  width="20px"><input type="checkbox" onclick="javascript:Utils.chk_ctl_all('id',this.checked);" /></grid:cell> 
+			<grid:cell  width="20px"><input type="checkbox" onclick="javascript:Utils.chk_ctl_all('id',this.checked);" /></grid:cell>
 				<grid:cell>用户名</grid:cell>
 				<grid:cell>姓名</grid:cell>
 				<grid:cell>最后登录时间</grid:cell>
@@ -38,7 +37,7 @@ select * from js_administrator
 				</grid:cell>
 				<grid:cell><c:if test="${admin.status==1}" >启用</c:if><c:if test="${admin.status==0}" >禁用</c:if>
 				</grid:cell>
-				 <grid:cell align="left"> <a href="admin_edit.jsp?id=${admin.id }" ><img src="../images/icon_edit.gif" border="0"/></a> </grid:cell> 
+				 <grid:cell align="left"> <a href="admin_edit.jsp?id=${admin.id }" ><img src="../images/icon_edit.gif" border="0"/></a> </grid:cell>
 			</grid:body>
 
 		</grid:grid>

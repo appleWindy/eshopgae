@@ -17,31 +17,31 @@
 <link href="../../admin/style/grid.css" rel="stylesheet" type="text/css" />
 <link href="../../css/pager.css" rel="stylesheet" type="text/css" />
 
-<script language="javascript" > 
+<script language="javascript" >
 grid_url='admin_list_panel.jsp';
 grid_id="admin_list";
 
 function del(){
-	 
+
 	 var flag = Utils.chk_selected("id");
-	 
-	 if(!flag){ 
+
+	 if(!flag){
 	 	alert('请选择要删除管理员');
 	 	return ;
 	 }
-	 
+
 	 if (confirm('确认删除此管理员吗?删除后将不可恢复')){
 		 gridpost('admin_from','../admin!delete.do');
 	 }
-	 
+
 }
 
- 
+
 
 
 function admin_list_loadSuccess(){
 	cell_color();
-  
+
 }
 
 
@@ -53,9 +53,9 @@ function admin_list_loadSuccess(){
 
 <span class="action-span1"><a href="../home.jsp">管理中心</a>  - 管理员列表 </span>
 <div style="clear:both"></div>
-</h1>  
- 
-<html:ajaxpanel id="admin_list" url="admin_list_panel.jsp"></html:ajaxpanel >
+</h1>
+
+
 
 <jsp:include page="../../admin/footer.jsp"/>
 </body>

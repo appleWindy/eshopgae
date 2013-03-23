@@ -48,7 +48,7 @@ String txnId = request.getParameter("txn_id");
 String receiverEmail = request.getParameter("receiver_email");
 String payerEmail = request.getParameter("payer_email");
 
-check notification validation
+//check notification validation
 if(res.equals("VERIFIED")) {
 // check that paymentStatus=Completed
 // check that txnId has not been previously processed
