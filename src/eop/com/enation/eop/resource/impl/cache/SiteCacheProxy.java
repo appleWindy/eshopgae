@@ -30,6 +30,7 @@ public class SiteCacheProxy extends AbstractCacheProxy<EopSite> implements ISite
 	public SiteCacheProxy(ISiteManager siteManager) {
 		super(CacheFactory.SITE_CACHE_NAME_KEY);
 		this.siteManager  = siteManager;
+		logger.info("SiteCacheProxy_SiteCacheProxy_end");
 	}
 
 	
@@ -99,7 +100,7 @@ public class SiteCacheProxy extends AbstractCacheProxy<EopSite> implements ISite
 	
 	
 	public EopSite get(Integer id) {
-		
+		logger.info("SiteCacheProxy_get_Int_1");
 		return this.siteManager.get(id);
 	}
 
@@ -115,19 +116,20 @@ public class SiteCacheProxy extends AbstractCacheProxy<EopSite> implements ISite
 	 */
 	
 	public EopSite get(String domain) {
-		
+		logger.info("SiteCacheProxy_get_String_1:"+domain);
 		
 //		if(logger.isDebugEnabled()){
 //			logger.debug("parse domain["+domain+"]...");
 //		}
 		
 		EopSite  site  = cache.get(domain);
+		logger.info("SiteCacheProxy_get_String_2");
 		if(site  == null){
 			
 //			if(logger.isDebugEnabled()){
 //				logger.debug("domain["+domain+"] not in cache, then query from database");
 //			}
-			
+			logger.info("SiteCacheProxy_get_String_3");
 			site  =  this.siteManager.get(domain);
 			
 		}
@@ -144,7 +146,9 @@ public class SiteCacheProxy extends AbstractCacheProxy<EopSite> implements ISite
 //		if(logger.isDebugEnabled()){
 //			logger.debug("finded and siteid is : "+ site.getId());
 //		}
+		logger.info("SiteCacheProxy_get_String_4");
 		cache.put(domain, site);
+		logger.info("SiteCacheProxy_get_String_5");
 		return site;
 	}
 	
