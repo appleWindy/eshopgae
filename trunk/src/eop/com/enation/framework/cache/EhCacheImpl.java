@@ -22,30 +22,17 @@ public class EhCacheImpl  implements ICache{
 	 * 
 	 */
 	public EhCacheImpl(String name){
-		System.out.println("EhCacheImpl_EhCacheImpl_s:"+name);
         try {
-        	
-        	System.out.println("EhCacheImpl_EhCacheImpl_1");
             CacheManager manager = CacheManager.getInstance();
-            System.out.println("EhCacheImpl_EhCacheImpl_2");
             cache = manager.getCache(name);
-            System.out.println("EhCacheImpl_EhCacheImpl_3");
             
             if (cache == null) {
-            	System.out.println("EhCacheImpl_EhCacheImpl_4");
                 manager.registerCache(name,  CacheManager.getInstance().getCacheFactory().createCache(Collections.emptyMap()));
-                System.out.println("EhCacheImpl_EhCacheImpl_5");
                 cache = manager.getCache(name);
-                System.out.println("EhCacheImpl_EhCacheImpl_6");
             }
         } catch (CacheException e) {
-        	System.out.println(e.toString());
         	e.printStackTrace();
         }
-        if(cache == null){
-        	System.out.println("Cache is null:"+name);
-        }
-        System.out.println("EhCacheImpl_EhCacheImpl_7");
 	}
 
 
