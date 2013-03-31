@@ -58,17 +58,9 @@ public class EhCacheImpl  implements ICache{
     public Object get(Object key){
     	
     	Object obj = null;
-        try {
-            if (key!= null && cache.containsKey(key)) {
-            	obj = cache.get(key);
-//                CacheEntry element = cache.getCacheEntry((Serializable) key);
-//                if (element!=null) {
-//                    obj = element.getValue();
-//                }
-            }
-        } catch (net.sf.ehcache.CacheException e) {
-            e.printStackTrace();
-        }
+    	if (key!= null && cache.containsKey(key)) {
+        	obj = cache.get(key);
+    	}
         return obj;
     }
 
