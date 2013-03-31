@@ -4,7 +4,7 @@ package com.enation.javashop.core.model;
  * @author kingapex
  *2010-4-8上午09:57:52
  */
-public class DeliveryItem {
+public class DeliveryItem implements java.io.Serializable{
  
 	private Integer    item_id;              
 	private Integer delivery_id;  

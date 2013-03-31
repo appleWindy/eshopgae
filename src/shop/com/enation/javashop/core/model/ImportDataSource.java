@@ -2,7 +2,7 @@ package com.enation.javashop.core.model;
 
 import java.util.List;
 
-public class ImportDataSource {
+public class ImportDataSource implements java.io.Serializable{
 	private List<Brand> brandList;
 	private List<Attribute> propList;
 	private String datafolder; //注意要包含商品号

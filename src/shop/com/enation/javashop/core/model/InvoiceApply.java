@@ -2,7 +2,7 @@ package com.enation.javashop.core.model;
 
 import com.enation.framework.database.NotDbField;
 
-public class InvoiceApply {
+public class InvoiceApply implements java.io.Serializable{
 	
    private Integer id;
    private String title;

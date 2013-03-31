@@ -6,7 +6,7 @@ package com.enation.javashop.core.model;
  * @author kingapex
  *
  */
-public class GoodsLvPrice {
+public class GoodsLvPrice implements java.io.Serializable{
 	private Double price;
 	private int lvid;
 	private int productid;

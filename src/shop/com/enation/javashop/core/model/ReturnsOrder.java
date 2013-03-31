@@ -9,7 +9,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  *
  */
-public class ReturnsOrder {
+public class ReturnsOrder implements java.io.Serializable{
 	   private Integer id;
 	   private int  orderid    ;
 	   private String ordersn;

@@ -1,6 +1,6 @@
 package com.enation.javashop.core.model;
 
-public class LimitBuyGoods {
+public class LimitBuyGoods implements java.io.Serializable{
 	private Integer limitbuyid;
 	private Integer goodsid;
 	private Double price;

@@ -6,7 +6,7 @@ package com.enation.javashop.core.model;
  * @author kingapex
  * 
  */
-public class OrderMeta {
+public class OrderMeta implements java.io.Serializable{
 	private Integer metaid;
 	private int orderid;
 	private String meta_key;

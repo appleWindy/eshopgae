@@ -5,7 +5,7 @@ package com.enation.javashop.core.model;
  * @author kingapex
  *2010-3-23下午03:34:04
  */
-public class Cart {
+public class Cart implements java.io.Serializable{
 	
 	private Integer cart_id;
 	private Integer product_id;

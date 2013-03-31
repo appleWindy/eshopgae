@@ -10,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  *2010-3-9下午05:57:16
  */
-public class Product {
+public class Product implements java.io.Serializable{
 
 	private Integer product_id;
 	private Integer goods_id;

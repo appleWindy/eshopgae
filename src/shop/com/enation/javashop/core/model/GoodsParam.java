@@ -9,7 +9,7 @@ import java.util.List;
  * @author apexking
  *
  */
-public class GoodsParam {
+public class GoodsParam implements java.io.Serializable{
 	
 	private String name; //参数名
 	private String value; //参数值

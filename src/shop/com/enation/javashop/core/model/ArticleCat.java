@@ -13,7 +13,7 @@ import com.enation.framework.database.NotDbField;
  * @author apexking
  *
  */
-public class ArticleCat  {
+public class ArticleCat implements java.io.Serializable {
 
 
      protected Integer cat_id;

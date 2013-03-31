@@ -8,7 +8,7 @@ package com.enation.javashop.core.model;
  *         version 1.0<br/>
  * <br/>
  */
-public class Seo {
+public class Seo implements java.io.Serializable{
 	private Integer id;
 	private String title;
 	private String meta_keywords;
