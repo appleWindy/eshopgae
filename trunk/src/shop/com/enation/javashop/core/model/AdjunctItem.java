@@ -10,7 +10,7 @@ import com.enation.javashop.core.model.support.AdjunctGroup;
  *         2010-3-31 上午09:49:07<br/>
  *         version 1.0<br/>
  */
-public class AdjunctItem  {
+public class AdjunctItem implements java.io.Serializable {
 	
 	private int productid;
 	private int goodsid;

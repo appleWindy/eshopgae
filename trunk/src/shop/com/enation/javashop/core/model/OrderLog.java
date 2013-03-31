@@ -5,7 +5,7 @@ package com.enation.javashop.core.model;
  * @author kingapex
  *2010-4-6下午05:24:16
  */
-public class OrderLog {
+public class OrderLog implements java.io.Serializable{
 	 	
 	private Integer  log_id;		
 	private Integer order_id;	

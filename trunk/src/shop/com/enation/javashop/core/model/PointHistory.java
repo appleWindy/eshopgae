@@ -9,7 +9,7 @@ import com.enation.framework.database.NotDbField;
  *         2010-3-22 上午11:01:31<br/>
  *         version 1.0<br/>
  */
-public class PointHistory  {
+public class PointHistory  implements java.io.Serializable{
 	private int id;
 	private int member_id;
 	private int point;

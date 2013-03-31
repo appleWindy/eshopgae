@@ -7,7 +7,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  *
  */
-public class AllocationItem {
+public class AllocationItem implements java.io.Serializable{
    private Integer allocationid;
    private int itemid; //所属的购物项id
    private int cat_id; //所属分类id 非数据库字段

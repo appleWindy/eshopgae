@@ -1,6 +1,6 @@
 package com.enation.javashop.core.model;
 
-public class Agreement {
+public class Agreement implements java.io.Serializable{
 	private String title;
 	private String url;
 	public String getTitle() {

@@ -10,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  * 
  */
-public class GroupBuyCount {
+public class GroupBuyCount implements java.io.Serializable{
 	private Integer ruleid;
 	private int groupid;
 	private int start_time;

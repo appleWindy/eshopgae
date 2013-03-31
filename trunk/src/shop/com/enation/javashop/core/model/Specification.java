@@ -9,7 +9,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  *2010-3-6上午12:30:54
  */
-public class Specification {
+public class Specification implements java.io.Serializable{
 	private Integer spec_id;
 	private String spec_name;
 	private Integer spec_show_type;

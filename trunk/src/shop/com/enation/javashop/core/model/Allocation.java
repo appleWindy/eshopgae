@@ -8,7 +8,7 @@ import java.util.List;
  * @author kingapex
  *
  */
-public class Allocation {
+public class Allocation implements java.io.Serializable{
 	private int orderid;
 	private int shipDepotId; //发货仓库id
 	private List<AllocationItem> itemList;

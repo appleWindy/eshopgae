@@ -1,6 +1,6 @@
 package com.enation.javashop.core.model;
 
-public class Gallery{
+public class Gallery implements java.io.Serializable{
 	private String small;
 	private String thumbnail;
 	private String big;

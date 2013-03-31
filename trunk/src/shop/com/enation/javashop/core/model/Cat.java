@@ -13,7 +13,7 @@ import com.enation.framework.database.NotDbField;
  * @author apexking
  *
  */
-public class Cat   {
+public class Cat implements java.io.Serializable  {
 
 
   

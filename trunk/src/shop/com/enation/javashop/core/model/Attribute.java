@@ -10,7 +10,7 @@ import java.util.Map;
  * @author apexking
  *
  */
-public class Attribute {
+public class Attribute implements java.io.Serializable{
 	
 	
 	private String name;

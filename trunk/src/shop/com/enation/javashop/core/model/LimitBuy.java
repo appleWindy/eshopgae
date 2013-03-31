@@ -14,7 +14,7 @@ import com.enation.framework.util.DateUtil;
  * @author kingapex
  * 
  */
-public class LimitBuy {
+public class LimitBuy implements java.io.Serializable{
 	private Integer id;
 	private String name;
 	private long start_time;

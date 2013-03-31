@@ -10,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  *         version 1.0<br/>
  * <br/>
  */
-public class FreeOffer {
+public class FreeOffer implements java.io.Serializable {
 	private Integer fo_id;
 	private Integer fo_category_id;
 	private String cat_name; //所属类别名，非数据库字段

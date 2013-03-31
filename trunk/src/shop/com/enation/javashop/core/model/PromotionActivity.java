@@ -5,7 +5,7 @@ package com.enation.javashop.core.model;
  * @author kingapex
  *2010-4-15上午11:57:56
  */
-public class PromotionActivity {
+public class PromotionActivity implements java.io.Serializable{
 	private Integer id;	      
 	private String  name;	   	
 	private int enable;		

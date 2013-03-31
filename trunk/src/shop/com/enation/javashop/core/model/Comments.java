@@ -13,7 +13,7 @@ import com.enation.framework.database.NotDbField;
  *         version 1.0<br/>
  * <br/>
  */
-public class Comments {
+public class Comments implements java.io.Serializable{
 	private Integer comment_id;
 	private Integer for_comment_id;
 	private Integer object_id; // meens goods_id or article_id
