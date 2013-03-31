@@ -24,6 +24,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.enation.framework.context.webcontext.ThreadContextHolder;
+import com.enation.framework.util.FileUtil;
+
 /**
  * 挂件xml参数解析工具
  * @author kingapex
@@ -259,7 +262,8 @@ public class WidgetXmlUtil {
 		    DocumentBuilderFactory factory = 
 		    DocumentBuilderFactory.newInstance();
 		    DocumentBuilder builder = factory.newDocumentBuilder();
-		    Document document = builder.parse(path);
+		    //Document document = builder.parse(path);
+		    Document document = builder.parse(FileUtil.getServletContextFileAsStream(path));
 		    return document;
 		}
 		catch (Exception e) {
