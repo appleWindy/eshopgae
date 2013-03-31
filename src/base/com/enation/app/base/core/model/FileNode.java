@@ -1,11 +1,13 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  * 资源管理器的一个文件实体
  * @author kingapex
  * 2010-8-18下午12:06:40
  */
-public class FileNode {
+public class FileNode implements Serializable{
 	
 	private String name;
 	private long size;

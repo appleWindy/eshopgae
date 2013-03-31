@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.enation.framework.database.NotDbField;
@@ -9,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  *
  */
-public class SiteMenu {
+public class SiteMenu implements Serializable{
 	
 	private Integer menuid;
 	private Integer parentid;

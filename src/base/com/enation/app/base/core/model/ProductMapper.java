@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -13,7 +14,7 @@ import com.enation.eop.sdk.utils.UploadUtil;
  * @author kingapex
  * 2010-9-26上午12:49:26
  */
-public class ProductMapper implements RowMapper {
+public class ProductMapper implements RowMapper ,Serializable{
 
 	public Object mapRow(ResultSet rs, int arg1) throws SQLException {
 		EopProduct product = new EopProduct();

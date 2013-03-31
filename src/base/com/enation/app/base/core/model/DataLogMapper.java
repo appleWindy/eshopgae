@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import com.enation.framework.model.Image;
  * @author kingapex
  * 2010-10-20上午09:59:22
  */
-public class DataLogMapper implements RowMapper {
+public class DataLogMapper implements RowMapper, Serializable {
 
 	public Object mapRow(ResultSet rs, int arg1) throws SQLException {
 		

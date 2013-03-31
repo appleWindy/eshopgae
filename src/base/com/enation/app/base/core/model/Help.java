@@ -1,11 +1,13 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  * 帮助实体
  * @author kingapex
  * 2010-10-17下午10:10:44
  */
-public class Help {
+public class Help implements Serializable{
 	private int id;
 	private String helpid;
 	private String title;

@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.enation.eop.sdk.context.EopSetting;
@@ -9,7 +10,7 @@ import com.enation.eop.sdk.context.EopSetting;
  * @author kingapex
  *
  */
-public class VersionState {
+public class VersionState implements Serializable{
 	
 	public VersionState(){
 		this.haveNewVersion=false;

@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,7 +13,7 @@ import com.enation.framework.util.DateUtil;
  * @author kingapex
  * 2010-8-14下午09:39:32
  */
-public class GuestBook {
+public class GuestBook implements Serializable{
 	private int id;
 	private int parentid;
 	private String title;

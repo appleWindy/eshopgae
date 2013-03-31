@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -8,7 +9,7 @@ import java.util.List;
  * @author kingapex
  *
  */
-public class UpdateLog {
+public class UpdateLog implements Serializable{
 	//应用ID
 	private String appId;
 	//更新日志

@@ -1,11 +1,13 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  *  解决方案分类
  * @author kingapex
  * 2010-9-1下午01:50:18
  */
-public class ProductCat {
+public class ProductCat implements Serializable{
 	private int id;
 	private String name;
 	private int num;

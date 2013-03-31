@@ -1,6 +1,8 @@
 package com.enation.app.base.core.model;
 
-public class ProductColor {
+import java.io.Serializable;
+
+public class ProductColor implements Serializable{
 	private int id;
 	private String colorname;
 	private int num;

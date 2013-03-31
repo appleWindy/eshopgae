@@ -1,5 +1,7 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 import com.enation.framework.database.NotDbField;
 
 /**
@@ -10,7 +12,7 @@ import com.enation.framework.database.NotDbField;
  *         version 1.0<br/>
  * <br/>
  */
-public class Adv {
+public class Adv implements Serializable{
 	private Integer aid;
 	private Integer acid;
 	private Integer atype;

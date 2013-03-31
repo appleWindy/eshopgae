@@ -1,11 +1,13 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  * @author kingapex
  * @version 1.0
  * @created 11-十月-2009 23:26:27
  */
-public class User {
+public class User implements Serializable{
 
 	private Integer userId;
 	private String name;
