@@ -1,10 +1,12 @@
 package com.enation.framework.cache;
 
 import java.io.Serializable;
+import java.util.Collections;
 
-import net.sf.ehcache.CacheException;
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
+import net.sf.jsr107cache.*;
+//import net.sf.ehcache.CacheException;
+//import net.sf.ehcache.CacheManager;
+//import net.sf.ehcache.Element;
 
  
 /**
@@ -14,23 +16,36 @@ import net.sf.ehcache.Element;
  */
 public class EhCacheImpl  implements ICache{
 
-	private net.sf.ehcache.Cache cache;
+	private Cache cache;
 
 	/**
 	 * 
 	 */
 	public EhCacheImpl(String name){
+		System.out.println("EhCacheImpl_EhCacheImpl_s:"+name);
         try {
+        	
+        	System.out.println("EhCacheImpl_EhCacheImpl_1");
             CacheManager manager = CacheManager.getInstance();
+            System.out.println("EhCacheImpl_EhCacheImpl_2");
             cache = manager.getCache(name);
+            System.out.println("EhCacheImpl_EhCacheImpl_3");
             
             if (cache == null) {
-                manager.addCache(name);
+            	System.out.println("EhCacheImpl_EhCacheImpl_4");
+                manager.registerCache(name,  CacheManager.getInstance().getCacheFactory().createCache(Collections.emptyMap()));
+                System.out.println("EhCacheImpl_EhCacheImpl_5");
                 cache = manager.getCache(name);
+                System.out.println("EhCacheImpl_EhCacheImpl_6");
             }
-        } catch (net.sf.ehcache.CacheException e) {
+        } catch (CacheException e) {
+        	System.out.println(e.toString());
         	e.printStackTrace();
         }
+        if(cache == null){
+        	System.out.println("Cache is null:"+name);
+        }
+        System.out.println("EhCacheImpl_EhCacheImpl_7");
 	}
 
 
@@ -44,11 +59,12 @@ public class EhCacheImpl  implements ICache{
     	
     	Object obj = null;
         try {
-            if (key!= null) {
-                Element element = cache.get((Serializable) key);
-                if (element!=null) {
-                    obj = element.getValue();
-                }
+            if (key!= null && cache.containsKey(key)) {
+            	obj = cache.get(key);
+//                CacheEntry element = cache.getCacheEntry((Serializable) key);
+//                if (element!=null) {
+//                    obj = element.getValue();
+//                }
             }
         } catch (net.sf.ehcache.CacheException e) {
             e.printStackTrace();
@@ -66,8 +82,9 @@ public class EhCacheImpl  implements ICache{
      */
     public void put(Object key, Object value){
         try {
-            Element element = new Element((Serializable) key, (Serializable) value);            
-            cache.put(element);
+        	cache.put((Serializable)key, (Serializable)value);
+//            Element element = new Element((Serializable) key, (Serializable) value);            
+//            cache.put(element);
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         } catch (IllegalStateException e) {
@@ -100,7 +117,8 @@ public class EhCacheImpl  implements ICache{
     public void clear(){
         try {
         	//cache.remove(arg0)
-            cache.removeAll();
+            //cache.removeAll();
+        	cache.clear();
         } catch (IllegalStateException e) {
         	e.printStackTrace();
         } 
