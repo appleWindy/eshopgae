@@ -34,10 +34,11 @@ public class FreeMarkerUtil {
 	 */
 	public static Configuration getServletCfg(String pageFolder) {
 
-		Configuration cfg = new Configuration();
+		cfg = getCfg();
+		//Configuration cfg = new Configuration();
 		cfg.setServletContextForTemplateLoading(ThreadContextHolder
 				.getHttpRequest().getSession().getServletContext(), pageFolder);
-		cfg.setObjectWrapper(new DefaultObjectWrapper());
+		//cfg.setObjectWrapper(new DefaultObjectWrapper());
 		return cfg;
 	}
 
@@ -45,7 +46,8 @@ public class FreeMarkerUtil {
 		if (cfg == null) {
 			cfg = new Configuration();
 			cfg.setTemplateUpdateDelay(6000);
-			cfg.setCacheStorage(new freemarker.cache.MruCacheStorage(20, 250));
+			//cfg.setCacheStorage(new freemarker.cache.MruCacheStorage(20, 250));
+			cfg.setCacheStorage(new freemarker.cache.NullCacheStorage());
 
 			 DateFormateDirectiveModel df = new DateFormateDirectiveModel();  
 			 cfg.setSharedVariable("dateFormat", df);
@@ -61,10 +63,11 @@ public class FreeMarkerUtil {
 	
 	public static Configuration getFolderCfg(String pageFolder)
 			throws IOException {
-		cfg =getCfg();
-		cfg.setDirectoryForTemplateLoading(new File(pageFolder));
-		
-		return cfg;
+		return getServletCfg(pageFolder);
+//		cfg =getCfg();
+//		cfg.setDirectoryForTemplateLoading(new File(pageFolder));
+//		
+//		return cfg;
 
 	}
 
