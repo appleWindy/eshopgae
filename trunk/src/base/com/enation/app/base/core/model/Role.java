@@ -1,5 +1,7 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 import com.enation.framework.database.NotDbField;
 
 
@@ -8,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  * 2010-10-24下午12:40:40
  */
-public class Role {
+public class Role implements Serializable {
 	private int roleid;
 	private String rolename;
 	private String rolememo;

@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.enation.framework.database.NotDbField;
@@ -10,7 +11,7 @@ import com.enation.framework.model.Image;
  * 
  * @author kingapex 2010-10-19下午03:29:02
  */
-public class DataLog {
+public class DataLog implements Serializable{
 	
 	private Integer id;
 	private String content;

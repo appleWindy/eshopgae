@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.enation.framework.database.NotDbField;
@@ -9,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  * @author kingapex
  * 2010-8-6上午07:50:31
  */
-public class Ask {
+public class Ask implements Serializable{
 	private int askid;
 	private String title;
 	private String content;

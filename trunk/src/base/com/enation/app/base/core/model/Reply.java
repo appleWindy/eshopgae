@@ -1,11 +1,13 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  * 问题回复
  * @author kingapex
  * 2010-8-7下午03:56:14
  */
-public class Reply {
+public class Reply implements Serializable{
 	
 	private Integer replyid;
 	private Integer askid;

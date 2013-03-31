@@ -1,5 +1,7 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  * 广告位
  * 
@@ -8,7 +10,7 @@ package com.enation.app.base.core.model;
  *         version 1.0<br/>
  * <br/>
  */
-public class AdColumn {
+public class AdColumn implements Serializable{
 	private Integer acid;
 	private String cname;
 	private String width;

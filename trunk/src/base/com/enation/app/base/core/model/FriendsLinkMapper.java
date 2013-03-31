@@ -1,5 +1,6 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -13,7 +14,7 @@ import com.enation.eop.sdk.utils.UploadUtil;
  * @author kingapex
  * 2010-7-17上午11:28:05
  */
-public class FriendsLinkMapper implements RowMapper {
+public class FriendsLinkMapper implements RowMapper ,Serializable {
 
 	public Object mapRow(ResultSet rs, int arg1) throws SQLException {
 		FriendsLink friendsLink = new FriendsLink();

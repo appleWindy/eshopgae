@@ -1,11 +1,13 @@
 package com.enation.app.base.core.model;
 
+import java.io.Serializable;
+
 /**
  * 权限点实体
  * @author kingapex
  * 2010-10-24下午12:38:51
  */
-public class AuthAction {
+public class AuthAction implements Serializable {
 	private int actid;
 	private String name;
 	private String type;
