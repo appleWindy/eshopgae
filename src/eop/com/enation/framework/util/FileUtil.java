@@ -14,6 +14,8 @@ import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Delete;
 import org.apache.tools.ant.taskdefs.Expand;
 
+import com.enation.framework.context.webcontext.ThreadContextHolder;
+
 /**
  * 文件工具类
  * 
@@ -320,6 +322,10 @@ public class FileUtil {
 			delete.setDir(zipFile);
 			delete.execute();
 		}
+	}
+	
+	public static InputStream getServletContextFileAsStream(String resource) {
+		return ThreadContextHolder.getHttpRequest().getSession().getServletContext().getResourceAsStream(resource);
 	}
 
 	public static void main(String arg[]) {
