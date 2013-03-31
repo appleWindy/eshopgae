@@ -1,11 +1,13 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * @author lzf
  * <p>created_time 2009-12-9 下午03:09:51</p>
  * @version 1.0
  */
-public class SiteManagerView {
+public class SiteManagerView implements Serializable{
 	private Integer id;
 	private Integer userid;
 	private String sitename;

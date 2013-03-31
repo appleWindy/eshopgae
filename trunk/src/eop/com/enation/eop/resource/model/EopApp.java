@@ -1,5 +1,6 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.enation.framework.database.NotDbField;
@@ -11,7 +12,7 @@ import com.enation.framework.database.NotDbField;
  *         </p>
  * @version 1.0
  */
-public class EopApp {
+public class EopApp implements Serializable {
 	
 	private Integer id;
 	private String appid;

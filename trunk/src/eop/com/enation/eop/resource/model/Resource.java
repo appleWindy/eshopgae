@@ -1,5 +1,7 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 import com.enation.framework.database.NotDbField;
 
 /**
@@ -8,7 +10,7 @@ import com.enation.framework.database.NotDbField;
  * <p>created_time 2009-11-13 上午11:14:24</p>
  * @version 1.0
  */
-public  class Resource {
+public  class Resource implements Serializable{
 	private Integer id;
  
 	private Integer deleteflag = 0;
