@@ -1,11 +1,13 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * 首页项
  * @author kingapex
  * 2010-10-12下午03:56:00
  */
-public class IndexItem {
+public class IndexItem implements Serializable{
 	
 	private Integer id;
 	private String title;

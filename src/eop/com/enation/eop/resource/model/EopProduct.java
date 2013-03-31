@@ -1,5 +1,7 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * 成品站实体
  * 
@@ -8,7 +10,7 @@ package com.enation.eop.resource.model;
  *         version 1.0<br/>
  * <br/>
  */
-public class EopProduct {
+public class EopProduct implements Serializable{
 	private Integer id;
 	private String productid;
 	private String product_name;

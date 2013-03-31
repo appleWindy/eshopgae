@@ -1,5 +1,7 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * 网站管理员所管理的站列表
  * 
@@ -9,7 +11,7 @@ package com.enation.eop.resource.model;
  *         </p>
  * @version 1.0
  */
-public class EopSiteAdmin {
+public class EopSiteAdmin implements Serializable{
 	private Integer id;
 	private Integer managerid;
 	private Integer siteid;

@@ -1,5 +1,7 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * @author lzf
  *         <p>
@@ -7,7 +9,7 @@ package com.enation.eop.resource.model;
  *         </p>
  * @version 1.0
  */
-public class ThemeUri extends Resource {
+public class ThemeUri extends Resource implements Serializable {
 	private Integer themeid;
 	private String uri;
 	private String path;

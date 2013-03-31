@@ -1,5 +1,7 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * @author lzf
  *         <p>
@@ -7,7 +9,7 @@ package com.enation.eop.resource.model;
  *         </p>
  * @version 1.0
  */
-public class SiteAppView {
+public class SiteAppView implements Serializable{
 	private Integer id;
 	private Integer siteid;
 	private Integer userid;

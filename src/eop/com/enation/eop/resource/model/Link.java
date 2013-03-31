@@ -1,6 +1,8 @@
 package com.enation.eop.resource.model;
 
-public class Link {
+import java.io.Serializable;
+
+public class Link implements Serializable {
 	private String text;
 	private String link;
 	public String getText() {

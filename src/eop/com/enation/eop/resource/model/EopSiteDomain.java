@@ -1,5 +1,7 @@
 package com.enation.eop.resource.model;
 
+import java.io.Serializable;
+
 /**
  * @author lzf
  *         <p>
@@ -7,7 +9,7 @@ package com.enation.eop.resource.model;
  *         </p>
  * @version 1.0
  */
-public class EopSiteDomain {
+public class EopSiteDomain implements Serializable{
 	private Integer id;
 	private String domain;
 	private Integer domaintype;
