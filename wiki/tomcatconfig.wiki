@@ -1,0 +1,2 @@
+ <?xml version="1.0" encoding="utf-8" ?> 
+  <Context path="/javamall" reloadable="false" docBase="D:\workspace\javamall\WebContent" workDir="D:\workspace\javamall\work" /> 
